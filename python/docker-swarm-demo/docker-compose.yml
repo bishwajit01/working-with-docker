@@ -1,0 +1,13 @@
+# version: "1.1"
+services:
+  master:
+    image: python-hello-vikram-docker
+    container_name: master_helloworld
+    hostname: master_hellovikram
+    build: python-hello-vikram-docker
+    ports:
+      - '4444:4444'
+  slave:
+    image: python-hello-vikram-docker
+    hostname: slave_hellovikram
+    build: python-hello-vikram-docker
